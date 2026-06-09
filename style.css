@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-family: "Inter";
+    font-size: 14px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--Grey900);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    background: var(--Grey800);
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.profile-image{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    height: 10vh;
+}
+
+.name-address{
+    text-align: center;
+
+}
+
+.name-address h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.name-address h2{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--Green);
+}
+
+.description{
+    margin-top: 10px;
+    /* font-size: 1rem; */
+    margin-bottom: 10px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.links a{
+    text-decoration: none;
+    color: var(--White);
+    /* font-size: 1rem; */
+    font-weight: 700;
+    background: var(--Grey700);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.links a:hover{
+    background-color: var(--Green);
+    color: var(--Grey900);
+}
+
+@media (max-width:450px){
+    .card{
+    width: 100%;
+    max-width: 70vw;
+    min-width: 60vw;
+    padding: 30px;
+    border-radius: 20px;
+}
+}
+
+
+
+
+
